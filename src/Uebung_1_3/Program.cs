@@ -2,6 +2,7 @@
 // Uebung_1_3
 // ------------------------------
 
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Uebung_1_3;
@@ -16,10 +17,9 @@ static int getNote(int[] points, string[] names)
 
         for(int i = 0; i < 3; i++)
         {
-            punkte = 
-        }
+            punkte = points[i];
 
-        if(punkte < 12)
+            if(punkte < 12)
         {
             note = 5;
         }
@@ -44,18 +44,19 @@ static int getNote(int[] points, string[] names)
             note = 1;
         }
 
-        for(int i = 0; i < 3; i++)
-        {
-            Console.WriteLine($"{names[i]} - {note}");
+        Console.WriteLine($"{names[i]} - {note}");
         }
 
+            return 0;
+        
     }
 
     static void Main(string[] args)
     {
         string[] namen = {"Mayer","Huber","Gruber"};
         int[] punkte = {21,18,15};
-        int points = 0;
+
+        Console.WriteLine($"{getNote(punkte, namen)}");
         
     }
 }
