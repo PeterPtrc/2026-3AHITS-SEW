@@ -57,6 +57,7 @@ static int getNote(int[] points, string[] names)
         int[] punkte = {21,18,15};
 
         Console.WriteLine($"{getNote(punkte, namen)}");
+    
         
     }
 }
